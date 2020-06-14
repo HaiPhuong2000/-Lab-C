@@ -43,7 +43,7 @@ void displayRange (int Arr[], int size){
 }
 void sortArray(int Arr[], int size){
 	printf("Array sort in ascending orders: \n");
-	for(int i =0; i=size-1; i++){
+	for(int i =0; i<size-1; i++){
 		for(int j=size-1; j>i; j--){
 			if(Arr[j] < Arr[j-1]){
 				int temp = Arr[j];
