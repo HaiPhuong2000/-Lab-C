@@ -11,6 +11,7 @@ int checkInput(int min, int max){
 	check=scanf("%d%c", &num, &c);
 	if((c != ' ' && c!= '\n' )|| num < min || num > max){
 		printf("The number you enter must in 0-5\n");
+		fflush(stdin);
 		check =0;
 	}else{
 		check =1;
@@ -53,9 +54,9 @@ int main(){
 				b[i]=-1;
 			}
 		}
-		for(i=0; i<4; i++){
+		for(i=0; i<4; i++){ //scan from head to tail to check matches value
 			for(j=0; j<4; j++){
-				if(c[i]==b[i]&& c[i] !=-1){
+				if(c[i]==b[i]&& c[i] !=-1){ //Check if the value matches and has not been counted
 					imperfect++;
 					c[i]=-1;
 					b[i]=-1;
